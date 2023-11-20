@@ -1,15 +1,6 @@
 import asyncio
-from os import getenv
-
-from aiogram import Bot, Dispatcher
-from dotenv import load_dotenv
-
+from bot import dp, bot
 from handlers import my_info_router, picture_router, start_router
-
-
-load_dotenv()
-bot = Bot(token=getenv('TOKEN'))
-dp = Dispatcher()
 
 
 async def main():
