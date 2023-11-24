@@ -4,6 +4,8 @@ import random
 from aiogram import Bot, Router, types
 from aiogram.filters import Command
 
+from bot import bot     # из папки bot импортирована переменная bot
+
 
 picture_router = Router()
 
@@ -16,4 +18,4 @@ async def picture(message: types.Message):
 
     photo = types.FSInputFile(file_path)
 
-    await Bot.send_photo(chat_id=message.chat.id, photo=photo)
+    await bot.send_photo(chat_id=message.chat.id, photo=photo)
