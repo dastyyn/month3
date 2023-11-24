@@ -1,6 +1,7 @@
 import asyncio
 
 from aiogram.types import BotCommand
+from dotenv import load_dotenv
 
 from bot import bot, dp
 from handlers import (my_info_router, picture_router,
